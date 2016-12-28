@@ -7,7 +7,8 @@ function spust() {
 }
 function vyres() {
     veta = $("#veta").val();
-    vetabez = strtr(veta, "ÁÄCČÇDĎÉEĚËÍNÓÖRŠTŤÚUÜÝŽáäcčçdďéeëíňnóörštťúuüýž", "AACCCDDEEEEINOORSTTUUUYZaacccddeeeinnoorstťuuuyz");
+    vetabez = strtr(veta, "AÁÄBCČÇDDĎÉEĚËFGHIÍJKLMNŇÓÖPQRŘSŠTŤÚUÜVWXYÝZŽáäcčçdďéeëíňnóörštťúuüýž ", "aaabcccdddeeeefghiijklmnnoopqrrssttuuuvwxyyzzaacccddeeeinnoorstťuuuyz");
+    console.log(vetabez);
     kontrola();
 }
 function kontrola() {
@@ -17,15 +18,17 @@ function kontrola() {
     console.log(druhapolovina);
     for (var i = 0; i < polovina; i++) {
         var a = vetabez.charAt(c++);
+        console.log(a);
         var b = vetabez.charAt(druhapolovina - 1);
+        console.log(b);
         if (a == b) {
             console.log("OK");
                     druhapolovina = druhapolovina - 1;
-                    $("#vypis").text("OK");
+                    $("#vypis").text("Toto je palindrom!");
         }
         else {
             console.log("chyba");
-                     $("#vypis").text("Chyba");           
+                     $("#vypis").text("Toto není palindrom");           
             break;
         }
 
