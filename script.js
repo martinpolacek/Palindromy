@@ -11,9 +11,9 @@ function vyres() {
     kontrola();
 }
 function kontrola() {
-    var polovina = Math.ceil(veta.length / 2);
+    var polovina = Math.ceil(vetabez.length / 2);
     var c = 0;
-    var druhapolovina = veta.length;
+    var druhapolovina = vetabez.length;
     console.log(druhapolovina);
     for (var i = 0; i < polovina; i++) {
         var a = vetabez.charAt(c++);
